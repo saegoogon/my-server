@@ -1,13 +1,19 @@
 const express = require("express");
+const fs = require("fs");
+
 const app = express();
-const path = require("path");
+app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "public")));
+// 회원가입
+app.post("/register", (req, res) => {
+  const { username, password } = req.body;
 
-app.get("/", (req, res) => {
-    res.send("서버작동중");
+  const newUser = { username, password };
+
+  fs.appendFileSync("users.txt", JSON.stringify(newUser) + "\n");
+
+  res.json({ message: "회원가입 완료!" });
 });
-const PORT = process.env.PORT
-app.listen(PORT, () =>{
-console.log("서버실행중: http://localhost:3000");
-});
+
+app.listen(3000, () => {
+  console.log("서버 실행중");
