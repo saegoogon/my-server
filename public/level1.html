@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Level 1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Level 1</h1>
+
+<p>Find the secret code.</p>
+
+<input id="answer" placeholder="enter flag">
+<button onclick="submitAnswer()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+
+async function submitAnswer(){
+
+let answer = document.getElementById("answer").value;
+
+let res = await fetch("/check",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+level:"level1",
+answer:answer
+})
+});
+
+let data = await res.json();
+
+if(data.success){
+document.getElementById("result").innerText="✔ Correct!";
+}else{
+document.getElementById("result").innerText="✘ Wrong!";
+}
+
+}
+
+</script>
+
+<!-- flag: hacktheplanet -->
+
+</body>
+</html>
