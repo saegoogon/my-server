@@ -1,65 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Hack test</title>
-    </head>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Hacking Skill Test</title>
 
-    <body>
-        <h1>내 해킹능력테스트</h1>
+<link rel="stylesheet" href="style.css">
 
-        <p>Q1. SQL injection이 뭔지 알고있나요?</p>
+</head>
 
-        <button onclick="score(1)">알고 있다</button>
-        <button onclick="score(0)">모른다</button>
+<body>
 
-        <p>Q2. 리눅스 명령어를 사용할 줄 아나요?</p>
+<h1>☠ HACKING SKILL TEST ☠</h1>
 
-        <button onclick="score(1)">알고있다 </button>
-        <button onclick="score(0)">모른다  </button>
+<p>Authorized hackers only.</p>
 
-        <p>Q3. 네크워크 개념을 이해하고있나요?</p>
+<button onclick="startTest()">START TEST</button>
 
-        <button onclick="score(1)">이해하고있다</button>
-        <button onclick="score(0)"> 그냥모른다</button>
+<div class="terminal">
+<p>> initializing system...</p>
+<p>> loading challenge...</p>
+<p>> ready.</p>
+</div>
 
-        <br><br>
-        <button onclick="result()">.결과 보기</button>
-        
+<script>
 
-        <script>
+function startTest(){
+    alert("Level 1 시작")
+}
 
-            let total = 0;
-            
+</script>
 
-            function score(v){
-                total +=v;
-            }
-
-            function result(){
-
-                if(total == 0){
-                    alert("해킹초보");
-                }
-
-                else if(total == 1){
-                    alert("보안입문자");
-                }
-
-                else if(total == 2){
-                    alert("보안중급자");
-                }
-
-                else{
-                    alert("미래의 화이트해커");
-                }
-
-            }
-        </script>
-    </body>
-    
-
-
-
-
+</body>
 </html>
