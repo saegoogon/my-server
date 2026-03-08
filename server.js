@@ -4,7 +4,7 @@ const fs = require("fs");
 const app = express();
 
 app.use(express.json());
-app.use(express.static("public));  // 추가
+app.use(express.static("public"));  // 추가
 
 //회원가입
 app. post("/register",(req,res) =>{
