@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>내 해킹능력테스트</title>
+    </head>
+
+    <body>
+        <h1>내 해킹능력테스트</h1>
+
+        <p>Q1. SQL injection이 뭔지 알고있나요?</p>
+
+        <button onclick="score(1)">알고 있다</button>
+        <button onclick="score(0)">모른다</button>
+
+        <p>Q2. 리눅스 명령어를 사용할 줄 아나요?</p>
+
+        <button onclick="score(1)">알고있다 </button>
+        <button onclick="score(0)">모른다  </button>
+
+        <p>Q3. 네크워크 개념을 이해하고있나요?</p>
+
+        <button onclick="score(1)">이해하고있다</button>
+        <button onclick="score(0)"> 그냥모른다</button>
+
+        <br><br>
+        <button onclick="result()">.결과 보기</button>
+        
+
+        <script>
+
+            let total = 0;
+
+            function score(v){
+                total +=v;
+            }
+
+            function result(){
+
+                if(total == 0){
+                    alert("해킹초보");
+                }
+
+                else if(total == 1){
+                    alert("보안입문자");
+                }
+
+                else if(total == 2){
+                    alert("보안중급자");
+                }
+
+                else{
+                    alert("미래의 화이트해커");
+                }
+
+            }
+        </script>
+    </body>
+    
+
+
+
+
+</html>
