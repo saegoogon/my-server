@@ -10,7 +10,7 @@ app.use(express.static("public));  // 추가
 app. post("/register",(req,res) =>{
    const {username ,password } =req . body;
 
-  const newUSER = { username, password };
+  const newUser = { username, password };
 
   fs.appendFileSync("users.txt",JSON.stringify(newUser) + "\n");
   res.json9({ message : "회원가입 완료! });
