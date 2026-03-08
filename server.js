@@ -14,7 +14,7 @@ app. post("/register",(req,res) =>{
 
   fs.appendFileSync("users.txt",JSON.stringify(newUser) + "\n");
   res.json9({ message : "회원가입 완료! });
-
+            });
      
     const PORT = process.env.PORT || 3000; //수정
 
