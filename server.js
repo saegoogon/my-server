@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));  
 
-//회원가입
+
 app. post("/register",(req,res) =>{
    const {username ,password } =req . body;
 
