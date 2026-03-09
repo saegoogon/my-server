@@ -1,48 +1,27 @@
-
 body{
-    background:black;
-    color:#00ff00;
-    font-family:"Courier New", monospace;
-    text-align:center;
-    padding-top:100px;
-}
-
-h1{
-    font-size:50px;
-    text-shadow:0 0 10px #00ff00;
-}
-
-p{
-    font-size:20px;
-    margin-bottom:40px;
+background:#0a0a0a;
+color:#00ffcc;
+font-family:monospace;
+text-align:center;
+padding-top:100px;
 }
 
 button{
-    background:black;
-    color:#00ff00;
-    border:2px solid #00ff00;
-    padding:15px 40px;
-    font-size:20px;
-    cursor:pointer;
-    transition:0.3s;
+padding:12px 30px;
+background:#111;
+color:#00ffcc;
+border:2px solid #00ffcc;
+cursor:pointer;
 }
 
 button:hover{
-    background:#00ff00;
-    color:black;
-    box-shadow:0 0 15px #00ff00;
+background:#00ffcc;
+color:black;
 }
 
-.terminal{
-    border:1px solid #00ff00;
-    width:600px;
-    margin:auto;
-    padding:20px;
-    margin-top:40px;
-    text-align:left;
-}body{
-background:black;
-color:#00ff00;
-font-family:monospace;
-text-shadow:0 0 5px #00ff00;
+input{
+padding:10px;
+background:#111;
+color:#00ffcc;
+border:1px solid #00ffcc;
 }

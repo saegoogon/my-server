@@ -1,0 +1,34 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ranking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏆 RANKING</h1>
+
+<div id="ranking"></div>
+
+<script>
+
+fetch("/ranking")
+.then(r=>r.json())
+.then(data=>{
+
+let html="";
+
+data.forEach((u,i)=>{
+html += i+1 + ". " + u.name + " +" + u.level + "<br>";
+});
+
+document.getElementById("ranking").innerHTML = html;
+
+});
+
+</script>
+
+</body>
+</html>
+```
